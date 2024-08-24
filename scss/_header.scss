@@ -1,0 +1,87 @@
+.header {
+    width: 100%;
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        width: 100%;
+        max-width: 1280px;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        
+    }
+    &-menu {
+        display: flex;
+        align-items: center;
+        &__navigation {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            column-gap: 50px;
+        }
+
+        &__ul {
+            display: flex;
+            column-gap: 40px;
+        }
+
+        &__list {
+            color: white;
+            font-size: 18px;
+            transition: all 0.5s ease;
+            &:hover {
+                font-size: 20px;
+                text-decoration: underline #7140EB;
+            }
+        }
+
+        &__button {
+            width: 183px;
+            height: 42px;
+            background-color: #7140EB;
+            color: white;
+            border-radius: 50px;
+            cursor: pointer;
+            border:none;
+            transition: all 0.5s ease;
+
+            &:hover {
+                background-color: white;
+                color: #7140EB;
+            }
+        }
+        @media (max-width: 768px) {
+            &__navigation {
+                column-gap: 20px;  
+            }
+            &__ul {
+                display: flex;
+                column-gap: 20px;
+            }
+        }
+        @media (max-width: 670px) {
+            &__navigation {
+                display: block;
+                text-align: right;
+            }
+        }
+    }
+    @media (max-width: 460px) {
+            &__container {
+                padding: 5px 10px;
+            }
+
+            &-menu {
+                &__ul {
+                    display: block;
+                }
+            }
+    }
+}

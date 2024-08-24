@@ -1,0 +1,69 @@
+.comment {
+    max-width: 100%;
+    height: 465px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 68px 100px;
+
+    &-container {
+        width: 100%;
+        max-width: 1280px;
+    }
+
+    h1 {
+        font-family: "Roboto", Regular;
+        font-size: 66px;
+        font-weight: 400;
+        padding-bottom: 98px;
+    }
+
+    &-cont {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 150px;
+        &__content {
+
+            h3 {
+                font-family: "Roboto", Regular;
+                font-size: 28px;
+                font-weight: 400;
+            }
+
+            p {
+                font-family: "Roboto", Regular;
+                font-size: 17px;
+                font-weight: 400;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+@media (max-width: 1260px) {
+    .comment {
+        height: auto;
+    }
+}
+@media (max-width: 950px) {
+    .comment {
+        padding: 34px 70px;
+
+        &-cont {
+            gap: 50px;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .comment {
+        width: 100%;
+        padding: 5px 10px;
+    }
+}
+@media (max-width: 510px) {
+    .comment {
+        &-cont {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

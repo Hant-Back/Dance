@@ -1,0 +1,115 @@
+.city {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 100%;
+        height: 715px;
+    }
+
+    &-image {
+        width: 100%;
+        height: 715px;
+        position: relative;
+    }
+
+    &-container {
+        width: 100%;
+        max-width: 1380px;
+        height: 715px;
+        position: absolute;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 100px 50px 70px;
+
+        &__textblock {
+            padding-top: 50px;
+            padding-right: 250px;
+            h1 {
+                font-family: "Roboto", Regular;
+                font-size: 65px;
+                font-weight: 400;
+                color: white;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-family: "Roboto", Regular;
+                font-size: 20px;
+                font-weight: 400;
+                color: white;
+            }
+        }
+
+        &__namecity {
+            text-align: right;
+            h1 {
+                font-family: "Roboto", Regular;
+                font-size: 100px;
+                font-weight: 400;
+                color: white;
+                height: 110px;
+            }
+        }
+
+        &__button {
+            margin: 40px 0;
+            width: 189px;
+            height: 62px;
+            background-color: #7140EB;
+            color: white;
+            border-radius: 50px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.5s ease;
+            &:hover {
+                background-color: white;
+                color: #7140EB;
+            }
+        }
+        @media (max-width: 1260px) {
+            &__textblock {
+                padding-top: 0;
+                padding-right: 100px;
+            }
+        }
+    }
+    @media (max-width: 1024px) {
+        &-container {
+            width: 100%;
+            height: auto;
+            padding: 50px 50px 35px 50px;
+        }
+    }
+    @media (max-width: 768px) {
+        img {
+          width: 100%;
+        }
+        &-image {
+            width: 100%;
+        }
+
+        &-container {
+            &__textblock {
+                padding: 0;
+            }
+            &__namecity {
+                h1 {
+                    font-size: 50px;
+                    height: auto;
+                }
+            }
+        }
+    }
+    @media (max-width: 500px) {
+        &-container {
+            padding: 5px 10px;
+            grid-template-columns: 1fr;
+
+            &__namecity {
+                text-align: start;
+            }
+        }
+    }
+}
